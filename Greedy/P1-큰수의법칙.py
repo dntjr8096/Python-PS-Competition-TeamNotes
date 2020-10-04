@@ -13,3 +13,10 @@ n, m, k = map(int, input().split())
 data = list(map(int, input().split()))
 
 data.sort()
+first = data[-1]
+second = data[-2]
+
+count = m // (k+1)
+answer = first*(m-count) + second*count
+
+print(answer)
