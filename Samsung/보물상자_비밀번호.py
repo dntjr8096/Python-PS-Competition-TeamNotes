@@ -2,13 +2,11 @@
 '''
 T = int(input())
 
-
 def hex2dec(hex):
     dec = 0
     for i in range(len(hex)):
         dec += int(hex[len(hex) - (i + 1)], 16) * (16 ** i)
     return dec
-
 
 for t in range(T):
     N, K = map(int, input().split())

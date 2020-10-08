@@ -57,6 +57,19 @@ format(42, '#b') == '0b101010'
 #문자열 포맷터 변환
 "int: {0:d}, bin: {0:b}, oct: {0:o}, hex: {0:x}".format(42)
 >>> 'int: 42, oct: 52, bin: 101010, hex: 2a'
+
+#함수(!6진법까지)
+def toN(n, num=2):
+    res=[]
+    res2=''
+    while n>0:
+       n, tmp = divmod(n, num)
+       res.append((str(tmp) if tmp <10 else 'ABCDEF'[tmp-10]))
+
+    for i in range(len(res)):
+        res2 += res.pop()
+
+    return res2
 ```
 
 # 순환 참조
@@ -69,4 +82,10 @@ for i in range(2):
     for j in range(0, len(num), 3):
         print(str[j:j+k+1])
     num = num[1:] + num[0]
+```
+
+# 맵 뒤집기
+```python
+#board 가로길이 W, 세로길이 H
+new_board = [[board[i][j] for i in reversed(range(H))] for j in range(W)]
 ```
