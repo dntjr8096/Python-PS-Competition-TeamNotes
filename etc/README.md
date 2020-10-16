@@ -84,7 +84,7 @@ for i in range(2):
     num = num[1:] + num[0]
 ```
 
-# 맵 뒤집기
+# 맵 뒤집기 (90도 회전)
 ```python
 #board 가로길이 W, 세로길이 H
 new_board = [[board[i][j] for i in reversed(range(H))] for j in range(W)]
