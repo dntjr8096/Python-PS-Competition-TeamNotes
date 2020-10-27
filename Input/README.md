@@ -5,6 +5,11 @@
 N, M = map(int, input().split())  #공백 구분하여 입력받기
 ```
 
+### 한 줄 한 번에 입력 받기
+```python
+input_data = sys.stdin.readline().rstrip() # rstrip 필수!(엔터 제거)
+```
+
 ### 여러줄 입력
 ```python
 data = [list(map(int, input().split())) for _ in range(n)]
